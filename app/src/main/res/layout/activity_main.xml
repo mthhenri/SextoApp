@@ -6,13 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/constBTN"
+        android:layout_width="137dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:onClick="showConstraint"
+        android:text="Constraint"
+        app:layout_constraintBottom_toBottomOf="@+id/linearBTN"
+        app:layout_constraintEnd_toStartOf="@+id/frameBTN"
+        app:layout_constraintStart_toEndOf="@+id/linearBTN"
+        app:layout_constraintTop_toTopOf="@+id/linearBTN" />
+
+    <Button
+        android:id="@+id/frameBTN"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:onClick="showFrame"
+        android:text="Frame"
+        app:layout_constraintBottom_toBottomOf="@+id/constBTN"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/constBTN" />
+
+    <Button
+        android:id="@+id/linearBTN"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:onClick="showLinear"
+        android:text="Linear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentsCON"
+        android:name="br.edu.up.app.LinearFragment"
+        android:layout_width="match_parent"
+        android:layout_height="687dp"
+        app:layout_constraintBottom_toTopOf="@+id/constBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout="@layout/fragment_linear" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
