@@ -44,7 +44,7 @@
         android:id="@+id/fragmentsCON"
         android:name="br.edu.up.app.LinearFragment"
         android:layout_width="409dp"
-        android:layout_height="match_parent"
+        android:layout_height="681dp"
         app:layout_constraintBottom_toTopOf="@+id/constBTN"
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout="@layout/fragment_linear" />
